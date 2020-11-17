@@ -1,0 +1,56 @@
+h2 {
+  color: rgba(0, 0, 255, 0.438);
+  margin: 5px 25px;
+}
+
+.text2 p {
+  font-size: 22px;
+  font-weight: 800;
+  color: tomato;
+}
+
+.title {
+  color: red;
+}
+
+/*Comentario2 si lo compila, si lo pasa al style.css*/
+.container-text {
+  /* width: 150px;
+  height: 150px; */
+  background-image: url(https://media1.s-nbcnews.com/i/newscms/2020_28/1587661/dogs-age-years-kb-inline-200707_7d0bca498155db9ae60dd81dec0ba6ab.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-text p {
+  color: red;
+}
+.container-text h4 {
+  color: blue;
+}
+.container-text h2 {
+  color: yellow;
+}
+.container-text hr {
+  width: 80%;
+}
+.container-text span {
+  color: grey;
+}
+
+.imgpaint, .card img {
+  width: 300px;
+  height: 300px;
+}
+
+.card img {
+  border-radius: 50%;
+  /*
+  width: 300px;
+  height: 300px;
+  */
+}

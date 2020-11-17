@@ -1,0 +1,103 @@
+//Variables
+$nombrevariable: red;
+$azul: rgba(0, 0, 255, 0.438);
+$transition: all 3s linear;
+$margin: 5px 25px;
+$uno: 5px;
+$dos: 25px;
+
+//Mixin
+//agrupaciones de propiedades en css (""""objeto"""")
+
+@mixin objeto1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: tomato;
+}
+
+@mixin flex-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    //Propiedad y variable
+    color: $azul;
+    margin: $uno $dos;
+}
+
+.text2 {
+
+    p{
+        // Utilizamos la palabra reservada include
+        // para llamar a las propiedades de un Mixin
+        @include objeto1;
+    }
+}
+
+.title {
+    color: red;
+}
+
+//Comentario no lo compila. Solo está en SCSS
+/*Comentario2 si lo compila, si lo pasa al style.css*/
+
+
+//Si la clase no tiene ninguna propiedad no lo compila al css.
+.banner {}
+
+// Anidación
+
+
+.container-text {
+    /* width: 150px;
+    height: 150px; */
+    background-image: url(https://media1.s-nbcnews.com/i/newscms/2020_28/1587661/dogs-age-years-kb-inline-200707_7d0bca498155db9ae60dd81dec0ba6ab.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    @include flex-c;
+    flex-direction: column;
+    p{
+        color: $nombrevariable;
+    }
+
+    h4 {
+        color: blue;
+    }
+
+    h2 {
+        color: yellow;
+    }
+    
+    hr {
+        width: 80%;
+    }
+
+    span {
+        color: grey;
+    }
+
+}
+
+.imgpaint {
+    width: 300px;
+    height: 300px;
+}
+
+.card {
+    img {
+        // Extend: Utilizar las propiedades de las clases que ya están en nuestro archivo.
+
+        @extend .imgpaint;
+        border-radius: 50%;
+        /*
+        width: 300px;
+        height: 300px;
+        */
+    }
+    
+}
+
+
